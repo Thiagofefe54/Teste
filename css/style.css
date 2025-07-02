@@ -1,0 +1,401 @@
+/* RESET BÁSICO E FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #343A40; /* Grafite */
+    line-height: 1.6;
+}
+
+/* HEADER E NAVEGAÇÃO */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #0A3D62; /* Azul Corporativo */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #FF8C00; /* Laranja Vibrante */
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* BOTÃO DE AÇÃO PRINCIPAL */
+.cta-button {
+    background-color: #FF8C00; /* Laranja Vibrante */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    background-color: #E67E22; /* Laranja mais escuro */
+}
+
+/* SEÇÃO HERO (PÁGINA INICIAL) */
+.hero {
+    /* AVISO: A linha abaixo usa o caminho para o SEU arquivo JPG local. */
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(10, 61, 98, 0.9)), url('../images/motoboy-entrega-banner.jpg') no-repeat center center/cover;
+    
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: white;
+    text-align: center;
+    padding: 0 5% 5%;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+/* SEÇÃO FEATURES (PÁGINA INICIAL) */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem 5%;
+    background-color: #F8F9FA; /* Cinza Claro */
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 30%;
+    min-width: 280px;
+    margin: 1rem;
+}
+
+.feature-card img {
+width: 50%; 
+height: 200px;
+aspect-ratio: 1 / 1;
+object-fit: cover;
+border-radius: 5px;
+margin-bottom: 1.5rem;
+background-color: #EAECEE;
+}
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #0A3D62; /* Azul Corporativo */
+}
+
+/* PÁGINAS INTERNAS (MAIN CONTENT) */
+.page-main {
+    padding: 4rem 5%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.page-main h2, .plans-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0A3D62; /* Azul Corporativo */
+}
+.page-main .slogan, .plans-section .slogan {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #5D6D7E;
+}
+
+
+/* SEÇÃO PLANOS */
+.plans-section {
+    padding: 4rem 5%;
+    background-color: #F8F9FA; /* Cinza Claro */
+}
+.plans-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.plan-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2.5rem;
+    width: 30%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.plan-card.recommended {
+    border: 2px solid #FF8C00; /* Laranja Vibrante */
+    position: relative;
+}
+.plan-card.recommended::before {
+    content: 'MAIS POPULAR';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FF8C00; /* Laranja Vibrante */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.plan-card h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #0A3D62; /* Azul Corporativo */
+    margin-bottom: 1.5rem;
+}
+.plan-card .price {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0A3D62; /* Azul Corporativo */
+    margin-bottom: 2rem;
+}
+.plan-card .price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #5D6D7E;
+}
+.plan-card ul {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+.plan-card ul li {
+    margin-bottom: 0.8rem;
+}
+.plan-card .cta-button {
+    text-align: center;
+    width: 100%;
+}
+
+
+/* SEÇÃO FAQ */
+.faq-item {
+    background-color: #F8F9FA; /* Cinza Claro */
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: 1.5rem;
+}
+.faq-question {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust as needed */
+}
+
+/* SEÇÃO CONTATO */
+.contact-container {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* TRABALHE CONOSCO */
+.work-with-us {
+    text-align: center;
+}
+.work-with-us p {
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PÁGINA DE PAGAMENTO */
+.payment-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    background: #F8F9FA; /* Cinza Claro */
+    padding: 2rem;
+    border-radius: 8px;
+}
+.payment-form h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+.payment-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.payment-form small {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+    color: #5D6D7E;
+}
+.plan-summary {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0A3D62; /* Azul Corporativo */
+    color: white;
+    text-align: center;
+    padding: 2rem 5%;
+}
+footer a {
+    color: white;
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px; /* Altura do header */
+        flex-direction: column;
+        background-color: #0A3D62; /* Azul Corporativo */
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+    .features, .plans-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-card, .plan-card {
+        width: 90%;
+        max-width: 400px;
+    }
+}

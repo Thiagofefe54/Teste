@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - Motos Prime</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Motos Prime</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html">Início</a></li>
+                <li class="nav-item"><a href="planos.html">Nossos Planos</a></li>
+            </ul>
+             <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="payment-section">
+            <h2>Finalize sua Contratação</h2>
+            <p class="slogan">Você está a um passo de garantir sua tranquilidade.</p>
+            
+            <form class="payment-form" action="#" method="POST">
+                <div class="plan-summary">
+                    <h3>Resumo do Pedido</h3>
+                    <p><strong>Plano Escolhido:</strong> <span id="plano-nome">Carregando...</span></p>
+                    <p><strong>Valor Mensal:</strong> <span id="plano-valor">R$ 0,00</span></p>
+                </div>
+
+                <h4>Seus Dados Pessoais</h4>
+                <input type="text" placeholder="Nome Completo" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="text" placeholder="CPF" required>
+
+                <h4>Dados do Pagamento</h4>
+                <input type="text" placeholder="Número do Cartão de Crédito" required>
+                <input type="text" placeholder="Nome no Cartão" required>
+                <input type="text" placeholder="Validade (MM/AA)" required>
+                <input type="text" placeholder="CVV" required>
+
+                <button type="submit" class="cta-button">Finalizar e Pagar com Segurança</button>
+                <small>Ambiente seguro. Seus dados estão protegidos.</small>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Motos Prime. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
