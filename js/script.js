@@ -2,12 +2,12 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", () => {
+if (hamburger && navMenu) hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
 });
 
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }));
@@ -55,4 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('plano-valor').textContent = "R$ 0,00";
         }
     }
+});
+
+// O formulário de contato ainda é uma demonstração local.
+document.querySelectorAll('.contact-form').forEach(form => {
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+        alert('Demonstração: o envio de mensagens ainda não está disponível.');
+    });
 });
